@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-
+#I am Chouchou's dandan,love u hahh.
 
 class Article (models.Model):
     title = models.CharField(max_length=100)
@@ -10,6 +10,7 @@ class Article (models.Model):
 
     def __str__(self):
         return self.title
+
 
     class Meta:
         ordering = ['-date_time']
