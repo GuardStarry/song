@@ -13,3 +13,16 @@ class Article (models.Model):
 
     class Meta:
         ordering = ['-date_time']
+
+
+class Song (models.Model):
+    name = models.CharField(max_length=100)
+    type = models.IntegerField
+    creator = models.CharField(max_length=100)
+    introduce = models.TextField(blank=True, null=True)
+    heat = models.IntegerField(default=0)
+    imgPath = models.CharField(max_length=100)
+    filePath = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
